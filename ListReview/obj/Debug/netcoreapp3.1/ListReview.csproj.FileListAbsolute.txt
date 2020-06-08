@@ -1,0 +1,11 @@
+C:\Users\mikah\Documents\Visual Studio 2019\Projects\ListReview\ListReview\obj\Debug\netcoreapp3.1\ListReview.csprojAssemblyReference.cache
+C:\Users\mikah\Documents\Visual Studio 2019\Projects\ListReview\ListReview\obj\Debug\netcoreapp3.1\ListReview.AssemblyInfoInputs.cache
+C:\Users\mikah\Documents\Visual Studio 2019\Projects\ListReview\ListReview\obj\Debug\netcoreapp3.1\ListReview.AssemblyInfo.cs
+C:\Users\mikah\Documents\Visual Studio 2019\Projects\ListReview\ListReview\bin\Debug\netcoreapp3.1\ListReview.exe
+C:\Users\mikah\Documents\Visual Studio 2019\Projects\ListReview\ListReview\bin\Debug\netcoreapp3.1\ListReview.deps.json
+C:\Users\mikah\Documents\Visual Studio 2019\Projects\ListReview\ListReview\bin\Debug\netcoreapp3.1\ListReview.runtimeconfig.json
+C:\Users\mikah\Documents\Visual Studio 2019\Projects\ListReview\ListReview\bin\Debug\netcoreapp3.1\ListReview.runtimeconfig.dev.json
+C:\Users\mikah\Documents\Visual Studio 2019\Projects\ListReview\ListReview\bin\Debug\netcoreapp3.1\ListReview.dll
+C:\Users\mikah\Documents\Visual Studio 2019\Projects\ListReview\ListReview\bin\Debug\netcoreapp3.1\ListReview.pdb
+C:\Users\mikah\Documents\Visual Studio 2019\Projects\ListReview\ListReview\obj\Debug\netcoreapp3.1\ListReview.dll
+C:\Users\mikah\Documents\Visual Studio 2019\Projects\ListReview\ListReview\obj\Debug\netcoreapp3.1\ListReview.pdb
