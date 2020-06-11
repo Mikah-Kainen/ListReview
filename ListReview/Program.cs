@@ -35,21 +35,77 @@ namespace ListReview
             return numbersToSort;
         }
 
+        static int[] MergeSort(int[] numbers)
+        {
+            if(numbers.Length < 2)
+            {
+                return numbers;
+            }
+
+            int splitSize = numbers.Length / 2;
+            int[] leftArray = new int[splitSize];
+            int[] rightArray = new int[splitSize + (numbers.Length%2)];
+            for(int i = 0; i < splitSize; i ++)
+            {
+                leftArray[i] = numbers[i];
+            }
+            for(int i = splitSize; i < numbers.Length; i ++)
+            {
+                rightArray[i - splitSize] = numbers[i];
+            }
+            return Merge(MergeSort(leftArray), MergeSort(rightArray));
+        }
+
+        static int[] Merge(int[] numbers1, int[] numbers2)
+        {
+            if(numbers1.Length == 0 || numbers2.Length == 0)
+            {
+                throw new Exception("numbers array is empty");
+            }
+            int[] mergedNumbers = new int[numbers1.Length + numbers2.Length];
+            int numbers1Count = 0;
+            int numbers2Count = 0;
+            for(int i = 0; i < mergedNumbers.Length; i ++)
+            {
+                if(numbers1Count > numbers1.Length - 1)
+                {
+                    mergedNumbers[i] = numbers2[numbers2Count];
+                    numbers2Count++;
+                }
+                else if(numbers2Count > numbers2.Length - 1)
+                {
+                    mergedNumbers[i] = numbers1[numbers1Count];
+                    numbers1Count++;
+                }
+                else if(numbers2[numbers2Count] <= numbers1[numbers1Count])
+                {
+                    mergedNumbers[i] = numbers2[numbers2Count];
+                    numbers2Count++;
+                }
+                else
+                {
+                    mergedNumbers[i] = numbers1[numbers1Count];
+                    numbers1Count++;
+                }
+            }
+            return mergedNumbers;
+        }
+
         static void Main(string[] args)
         {
-            MyList<int> numbers = new MyList<int>();
+            int[] numbers = new int[10];
             Random random = new Random();
 
             for(int i = 0; i < 10; i ++)
             {
-                numbers.Add(random.Next(0, 30));
-                Console.WriteLine($"{numbers.FindIndex(i)}");
+                numbers[i] = random.Next(0, 30);
+                Console.WriteLine($"{numbers[i]}");
             }
             Console.WriteLine();
-            numbers = BubbleSort(numbers);
+            numbers = MergeSort(numbers);
             for(int i = 0; i < 10; i ++)
             {
-                Console.WriteLine($"{numbers.FindIndex(i)}");
+                Console.WriteLine($"{numbers[i]}");
             }
         }
     }
